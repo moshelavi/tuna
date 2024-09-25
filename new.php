@@ -1,11 +1,12 @@
 <?php
+// להבטיח שהתשובה מוחזרת בפורמט JSON עם קידוד UTF-8
 header('Content-Type: application/json; charset=utf-8');
 
-// יוצרים את המבנה של התשובה ב-JSON לפי הפורמט של ימות המשיח
+// יוצרים את התגובה בפורמט JSON הנדרש עבור ימות המשיח
 $response = [
     "PlayTTS" => [
-        "text" => "שלום עולם",
-        "language" => "hebrew"
+        "text" => "שלום עולם",   // הטקסט שיוקרא
+        "language" => "hebrew"   // השפה היא עברית (hebrew)
     ]
 ];
 
