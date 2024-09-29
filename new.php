@@ -1,16 +1,13 @@
 <?php
-// להבטיח שהתשובה מוחזרת בפורמט JSON עם קידוד UTF-8
-header('Content-Type: application/json; charset=utf-8');
+// קבל את מה שהמשתמש אמר
+$user_input = $_REQUEST['user_input'];
 
-// יוצרים את התגובה בפורמט JSON הנדרש עבור ימות המשיח
-$response = [
-    "PlayTTS" => [
-        "text" => "שלום עולם",   // הטקסט שיוקרא
-        "language" => "hebrew"   // השפה היא עברית (hebrew)
-    ]
-];
-
-// מחזירים את התשובה בפורמט JSON
-echo json_encode($response);
-
+// בדוק אם המשתמש אמר "שלום"
+if (trim($user_input) == "שלום") {
+    // המערכת תענה "עולם"
+    echo "עולם";
+} else {
+    // תגובה אחרת
+    echo "אני לא מבין";
+}
 ?>
